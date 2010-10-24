@@ -1,0 +1,8 @@
+This is just a simple example for connecting to facebook with OAUTH2.
+With this you can do all the reading and writing stuff to facebook.
+See the Koala Docs for more.
+
+Made with the help of this two awesome gems:
+Sinatra -> http://www.sinatrarb.com/
+Koala -> http://github.com/arsduo/koala
+
