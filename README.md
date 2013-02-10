@@ -11,6 +11,7 @@ See the Koala Docs for more.**
 5. Add your IP to the app's IP whitelist on facebook
 6. Set a long and random string as cookie secret (Line: 21)
 7. Start your Server with
+
 ``` bash
 $ shotgun
 ```
