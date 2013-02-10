@@ -5,9 +5,13 @@ require 'sinatra'
 require 'koala'
 
 # register your app at facebook to get those infos
-APP_ID = 1234567890 # your app id
-APP_CODE = '76dhf8656a75...' # your app code
-SITE_URL = 'http://localhost:9393/' # your app site url
+# your app id
+APP_ID     = 1234567890
+# your app secret
+APP_SECRET = '76dhf8656a75...'
+# set your app site url
+# don't forget to add your IP to the app's whitelist on facebook
+SITE_URL   = 'http://localhost:9393/'
 
 class SimpleRubyFacebookExample < Sinatra::Application
 
@@ -33,7 +37,7 @@ class SimpleRubyFacebookExample < Sinatra::Application
 
 	get '/login' do
 		# generate a new oauth object with your app data and your callback url
-		session['oauth'] = Facebook::OAuth.new(APP_ID, APP_CODE, SITE_URL + 'callback')
+		session['oauth'] = Facebook::OAuth.new(APP_ID, APP_SECRET, SITE_URL + 'callback')
 		# redirect to facebook to get your code
 		redirect session['oauth'].url_for_oauth_code()
 	end
