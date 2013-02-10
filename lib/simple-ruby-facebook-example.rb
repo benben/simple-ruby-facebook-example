@@ -18,7 +18,7 @@ class SimpleRubyFacebookExample < Sinatra::Application
 	include Koala
 
 	set :root, APP_ROOT
-	enable :sessions
+	use Rack::Session::Cookie, secret: 'PUT_A_GOOD_SECRET_IN_HERE'
 
 	get '/' do
 		if session['access_token']
