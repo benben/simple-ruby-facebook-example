@@ -6,15 +6,20 @@ See the Koala Docs for more.
 
 *Clone the Code
 *Run bundle inside the folder
-*Change APP_ID, APP_CODE (get this from facebook by registering an app)
+*Change APP_ID, APP_SECRET (get this from facebook by registering an app)
 *Change SITE_URL to an adress where your server will be reachable by facebook
-*Start your Server with shotgun
+*Add your IP to the app's IP whitelist on facebook
+*Set a long and random string as cookie secret (Line: 21)
+*Start your Server with
+``` bash
+$ shotgun
+```
 
 *PROPS*
 
 Made with the help of this two awesome gems:
 Sinatra -> http://www.sinatrarb.com/
-Koala -> http://github.com/arsduo/koala
+Koala   -> http://github.com/arsduo/koala
 
 *LICENSE*
 
