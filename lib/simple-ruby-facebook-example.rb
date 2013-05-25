@@ -1,23 +1,14 @@
-APP_ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..'))
-
-require 'rubygems'
-require 'sinatra'
-require 'koala'
+#let Bundler handle all requires
+Bundler.require(:default)
 
 # register your app at facebook to get those infos
 # your app id
 APP_ID     = 1234567890
 # your app secret
 APP_SECRET = '76dhf8656a75...'
-# set your app site url
-# don't forget to add your IP to the app's whitelist on facebook
-SITE_URL   = 'http://localhost:9393/'
 
 class SimpleRubyFacebookExample < Sinatra::Application
 
-	include Koala
-
-	set :root, APP_ROOT
 	use Rack::Session::Cookie, secret: 'PUT_A_GOOD_SECRET_IN_HERE'
 
 	get '/' do
@@ -37,7 +28,7 @@ class SimpleRubyFacebookExample < Sinatra::Application
 
 	get '/login' do
 		# generate a new oauth object with your app data and your callback url
-		session['oauth'] = Facebook::OAuth.new(APP_ID, APP_SECRET, SITE_URL + 'callback')
+		session['oauth'] = Koala::Facebook::OAuth.new(APP_ID, APP_SECRET, "#{request.base_url}/callback")
 		# redirect to facebook to get your code
 		redirect session['oauth'].url_for_oauth_code()
 	end
@@ -54,6 +45,5 @@ class SimpleRubyFacebookExample < Sinatra::Application
 		session['access_token'] = session['oauth'].get_access_token(params[:code])
 		redirect '/'
 	end
-
 end
 
