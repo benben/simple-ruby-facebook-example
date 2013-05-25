@@ -10,12 +10,7 @@ See the Koala Docs for more.**
 4. Add an URL like local.myapp.com pointing to 127.0.0.1 in your `/etc/hosts` file
 5. Add local.myapp.com to your App Domains list on facebook
 6. Set a long and random string as cookie secret (Line: 12)
-7. Start your Server with
-
-``` bash
-$ shotgun
-```
-
+7. Start your Server with `$ shotgun`
 8. point your browser to `http://local.myapp.com:9393/` and click login
 
 ### PROPS
