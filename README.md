@@ -7,14 +7,16 @@ See the Koala Docs for more.**
 1. Clone the repository
 2. Run bundle inside the folder
 3. Change APP_ID, APP_SECRET (get this from facebook by registering an app)
-4. Change SITE_URL to an adress where your server will be reachable by facebook
-5. Add your IP to the app's IP whitelist on facebook
-6. Set a long and random string as cookie secret (Line: 21)
+4. Add an URL like local.myapp.com pointing to 127.0.0.1 in your `/etc/hosts` file
+5. Add local.myapp.com to your App Domains list on facebook
+6. Set a long and random string as cookie secret (Line: 12)
 7. Start your Server with
 
 ``` bash
 $ shotgun
 ```
+
+8. point your browser to `http://local.myapp.com:9393/` and click login
 
 ### PROPS
 
