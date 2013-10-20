@@ -13,7 +13,14 @@ See the Koala Docs for more.**
 7. Start your Server with `$ shotgun`
 8. point your browser to `http://local.myapp.com:9393/` and click login
 
-### PROPS
+### DOING MORE
+
+At this point you can make calls to the Facebook API (there are some examples in the comment): https://github.com/benben/simple-ruby-facebook-example/blob/master/lib/simple-ruby-facebook-example.rb#L17-L23
+
+From that on, its better to read the [Koala documentation](https://github.com/arsduo/koala), use the [Graph Explorer from Facebook](https://developers.facebook.com/tools/explorer) and read the [Facebook API Documentation](https://developers.facebook.com/docs/graph-api/) to get an idea what you can do after the
+authentication.
+
+### KUDOS
 
 Made with the help of this two awesome gems:
 * Sinatra -> http://www.sinatrarb.com/
