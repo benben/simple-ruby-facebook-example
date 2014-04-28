@@ -1,4 +1,5 @@
 #let Bundler handle all requires
+require 'bundler'
 Bundler.require(:default)
 
 # register your app at facebook to get those infos
